@@ -129,6 +129,41 @@ const drawLightning = (context, x, y) => {
 drawLightning(c, 100, 150);
 drawLightning(c, 800, 150);
 drawLightning(c, 1000, 150);
+
+
+
+//rain
+
+// c.beginPath();
+// c.moveTo(1100, 100);
+// c.lineTo(1080, 150);
+// c.lineWidth = 1;
+// c.strokeStyle = "blue";
+// c.stroke();
+// c.fill();
+
+const rain = (context, x, y) => {
+    context.beginPath();
+    context.moveTo(x, y);
+    context.lineTo(x-20, y+50);
+    context.lineWidth = 1;
+    context.strokeStyle = "blue";
+    context.stroke();
+    context.fill();
+}
+// fix
+let rainX = 100
+let rainY = 100
+for (let i = 0; i<30; i++) {
+    for (let j = 0; j<30; j++) {
+        rain(c, rainX, rainY);
+        rainX+=50; 
+    }
+    rainY+=50;
+}
+
+
+
 // c.beginPath();
 // c.lineWidth = 5;
 // c.moveTo(100,100);
@@ -143,6 +178,42 @@ drawLightning(c, 1000, 150);
 
 // c.strokeStyle = "yellow";
 // c.stroke();
+
+
+// house
+c.beginPath();
+c.moveTo(650, 350);
+c.lineTo(550, 400);
+c.lineTo(750, 400);
+c.fillStyle="red";
+c.fill();
+
+c.beginPath();
+c.rect(550, 400, 200, 100);
+c.fillStyle = "beige"
+c.fill();
+
+c.beginPath();
+c.rect(575, 420, 40, 40);
+c.fillStyle = "lightblue";
+c.fill();
+
+c.beginPath();
+c.rect(680, 420, 40, 40);
+c.fillStyle = "lightblue";
+c.fill();
+
+c.beginPath();
+c.rect(632, 440, 30, 60);
+c.fillStyle = "brown"
+c.fill();
+
+c.beginPath();
+c.moveTo(75, 50)
+c.arc(640, 470, 5, 0, Math.PI * 2, true)
+c.fillStyle = '#FFD700'; // Yellow color for the sun
+c.fill();
+
 
 
 
