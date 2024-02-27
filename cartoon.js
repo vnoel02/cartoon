@@ -3,6 +3,7 @@ var c = canvas.getContext("2d");
 
 
 
+
 // back hill
 c.beginPath();
 c.moveTo(0, 400);
@@ -151,6 +152,11 @@ for (let j = 0; j < 200; j++) {
     rain(rainX, rainY);
 }
 
+
+//Caption
+c.font = '40px arial';
+c.fillStyle = "#FFFFFF";
+c.fillText("On a rainy day...", 10, 50);
 
 
 
